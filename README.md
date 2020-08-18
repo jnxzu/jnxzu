@@ -1,16 +1,16 @@
-### Hi there 👋
+## Hi there, I'm Janek 🙂
 
-<!--
-**jnxzu/jnxzu** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+I'm a versatile developer with a passion for front-end but an interest in all technologies and paths of software development.
+Feel free to check out my work in any of my repositories.
 
-Here are some ideas to get you started:
+I have graduated University of Gdańsk with a Bachelor's degree in Computer Science. 
+Currently looking to start my career as a developer as well as a Master degree level education.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+#### Links
+###### Business
+- 📁 [Portfolio]() (coming soon...)
+- 💼 [LinkedIn](https://www.linkedin.com/in/jan-biel%C3%B3wka-1457a61b3/)
+###### Social
+- 📷 [Instagram](https://www.instagram.com/jnxzu__/)
+- 👍 [Facebook](https://www.facebook.com/janek.bielowka)
+- 🐦 [Twitter](https://twitter.com/jnxzu)
