@@ -36,7 +36,7 @@ jobs:
         shell: bash
         run: |
           cat > body.md <<'EOF'
-          @codex Please investigate this failed CI run and open a pull request with a minimal proposed fix.
+          CI failed and needs a minimal fix PR.
 
           Context:
           - Repository: `${{ github.repository }}`
@@ -84,3 +84,21 @@ jobs:
           EOF
 
           echo "issue_number=$(jq -r '.number' response.json)" >> "$GITHUB_OUTPUT"
+
+      - name: Ask Codex to open a PR
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        shell: bash
+        run: |
+          cat > comment.md <<'EOF'
+          @codex Please fix this CI failure and open a minimal pull request.
+
+          Use the issue description for the failing workflow run, target branch, and constraints. Keep the change scoped to the CI failure only.
+          EOF
+
+          gh api \
+            --method POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "/repos/${{ github.repository }}/issues/${{ steps.create_issue.outputs.issue_number }}/comments" \
+            -f body="$(cat comment.md)"
