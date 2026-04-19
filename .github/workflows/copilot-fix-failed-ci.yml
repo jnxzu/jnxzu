@@ -36,7 +36,7 @@ jobs:
         shell: bash
         run: |
           cat > body.md <<EOF
-          CI failed for \`${{ github.repository }}\`.
+          CI failed for `${{ github.repository }}`.
 
           Please investigate the failing workflow run and open a PR with a proposed fix.
 
@@ -52,7 +52,9 @@ jobs:
           - Keep the change minimal.
           - Do not broaden scope beyond fixing the failure.
           - After changes, ensure the relevant tests/build pass.
-          - Open a pull request targeting \`${{ inputs.base_branch }}\`.
+          - Open a pull request targeting `${{ inputs.base_branch }}`.
+          - Request review from @${{ inputs.reviewer }} when the PR is ready.
+          - If review changes are requested, address only those comments with minimal follow-up commits.
           EOF
 
           {
@@ -81,7 +83,7 @@ jobs:
             "agent_assignment": {
               "target_repo": "${{ github.repository }}",
               "base_branch": "${{ inputs.base_branch }}",
-              "custom_instructions": "Focus only on fixing this CI failure. Keep the PR small. Do not refactor unrelated code. Add or update tests only if needed for the fix.",
+              "custom_instructions": "Focus only on fixing this CI failure. Keep the PR small. Do not refactor unrelated code. Add or update tests only if needed for the fix. When the PR is ready, request review from @${{ inputs.reviewer }}. If review changes are requested, address only those comments with minimal follow-up commits.",
               "custom_agent": "",
               "model": ""
             }
