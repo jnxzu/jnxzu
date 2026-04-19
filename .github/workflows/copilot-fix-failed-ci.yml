@@ -35,7 +35,7 @@ jobs:
         id: body
         shell: bash
         run: |
-          cat > body.md <<EOF
+          cat > body.md <<'EOF'
           CI failed for `${{ github.repository }}`.
 
           Please investigate the failing workflow run and open a PR with a proposed fix.
